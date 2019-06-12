@@ -1,0 +1,16 @@
+from,to,relationship,time
+hs,ss,2,1
+hs,kh,1,1
+hs,wg,1,1
+hs,cp,1,1
+hs,as,1,1
+ss,kh,1,1
+ss,wg,1,1
+ss,cp,1,1
+ss,as,1,1
+kh,wg,1,1
+kh,cp,1,1
+kh,as,1,1
+wg,cp,1,1
+wg,as,1,1
+cp,as,1,1
