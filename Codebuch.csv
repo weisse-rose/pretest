@@ -1,0 +1,18 @@
+CODEBUCH,
+"Im Codebuch definieren Sie, wie und nach welchen Kriterien erfasst werden.",
+,
+Wert,Kommentar
+edgelist,
+from,"definiert den Sender. Entspricht ID in der Nodelist. Keine Sonderzeichen, nur ein Wort"
+to ,"definiert den Empfänger. Entspricht ID in der Nodelist. Keine Sonderzeichen, etc. "
+relationship," Freunde = 1, Familie (blutsverwandt) = 2,  Bekannte = 3, Beziehungspartner = 4, Arbeitskollegen = 5, Feinde = 6"
+time," Vor Flugblatt 1 = 0, Flugblatt 1 = 1, Flugblatt 2 = 2, Flugblatt 3 = 3, Flugblatt 4 = 4, Flugblatt 5 = 5, Flugblatt 6 = 6, nach Flugblatt 6 = 7"
+"time definition (""they had a connection from that point forward"")","1 - 4 = 27.06.1942 - 12.07.1942, 5 = 27. - 29. Januar 1943, 6 = ""Mitte Februar"", 8. - 18.02.1943"
+nodelist,
+id,initialen
+name,vorname nachname
+sex,"1 = männlich, 2 = weiblich"
+age Februar 1943,"10-20 = 1, 21-30 = 2, 31-40 = 3, 41-50 = 4, 51-60 = 5, 61-70 = 6, 71-80 = 7, 81-90 = 8
+"
+hometown 1943,"München = 1, Innsbruck = 2, "
+occupation,"Student = 1, Schüler = 2, Berufstätig = 3, Pansioniert = 4, Arbeitslos = 5"
