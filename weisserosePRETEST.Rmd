@@ -1,42 +1,24 @@
 ---
-title: "R Notebook"
+title: "Projekt Weisse Rose, 226305 WS20" 
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+```{r Einlesen des Datensatzes aus github}
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+# Datensatz unter https://github.com/weisse-rose/pretest
 
-```{r}
-getwd()
-```
+# Igraph Laden
+library(igraph)
 
+# direkt aus dem repository einlesen
+edges <- read.csv("https://raw.githubusercontent.com/weisse-rose/pretest/master/226305_Projekt_weisserose_Edgelist.csv.csv")
+nodes <- read.csv("https://raw.githubusercontent.com/weisse-rose/pretest/master/226305_Projekt_weisserose_Nodelist.csv.csv")
 
-```{r}
-```
-
-```{r}
-edges <- read.csv("weisserose_edgelist.csv")
-edges
-head(edges)
-```
-
-```{r}
-nodes <- read.csv("weisserose_nodelist.csv")
-nodes
-head(nodes)
-```
-
-```{r}
+# igraph-Objekt erstellen
 ties <-  as.matrix(edges)
 knots <- as.matrix(nodes)
-weisserose <-  graph_from_data_frame(d=ties,vertices=knots, directed=F)
-plot(weisserose)
+wr <-  graph_from_data_frame(d=ties,vertices=knots, directed=T)
+
+# Erste Visualisierung
+plot(wr)
 ```
-
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
-
